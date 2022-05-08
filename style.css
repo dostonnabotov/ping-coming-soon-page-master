@@ -1,0 +1,191 @@
+:root {
+    --clr-primary-200: hsl(223, 100%, 88%);
+    --clr-primary-400: hsl(223, 87%, 63%);
+    --clr-danger: hsl(354, 100%, 66%);
+
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-400: hsl(0, 0%, 59%);
+    --neutral-900: hsl(209, 33%, 12%);
+
+    --ff-body: 'Libre Franklin', sans-serif;
+
+    --fs-400: 1rem;
+    --fs-900: 2rem;
+
+    --fw-400: 300;
+    --fw-500: 600;
+    --fw-700: 700;
+}
+
+
+@media (min-width: 50em) {
+    :root  {
+        --fs-400: 1.25rem;
+        --fs-900: 3rem;
+    }
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1, h2, h3,
+p,
+ul, ol {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+form,
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-primary-400);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+
+    color: var(--neutral-400);
+}
+
+/* Utilities */
+/* _main */
+.container {
+    width: min(100% - 2rem, 45rem);
+    margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-spacer, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.py-4 { padding-block: 4rem 3rem; }
+
+/* _typography */
+.fw-400 { font-weight: var(--fw-400); }
+.fw-500 { font-weight: var(--fw-500); }
+.fw-700 { font-weight: var(--fw-700); }
+
+.text-dark { color: var(--neutral-900); }
+.text-light { color: var(--neutral-400); }
+
+.text-center { text-align: center; }
+
+/* Components */
+/* _button */
+.btn {
+    display: inline-block;
+    height: fit-content;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--clr-primary-400);
+    color: var(--neutral-100);
+    outline: 1px solid inherit;
+    box-shadow: 0 5px 10px -2px var(--neutral-400);
+}
+
+.btn--primary:where(:hover, :focus) {
+    opacity: .9;
+}
+
+/* Main Styles */
+/* _header */
+.logo {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+/* _main */
+h1 { font-size: var(--fs-900); }
+
+/* __form */
+.form { margin-block: 2rem 3rem; }
+
+@media (min-width: 30em) {
+    .form {
+        grid-template-columns: 4fr 2fr;
+    }
+}
+
+input:where([type="email"], [type="submit"]) {
+    width: 100%;
+    margin-inline: auto;
+    padding: .8em 2em;
+
+    border: 0;
+    border-radius: 30px;
+}
+
+input[type="email"] {
+    outline: 1px solid var(--clr-primary-200);
+}
+
+.error-message {
+    display: none;
+    margin: .5em 2.5em;
+
+    font-size: .8rem;
+    font-style: italic;
+}
+
+/* _footer */
+footer > ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    width: fit-content;
+    margin: 2rem auto;
+
+    list-style: none;
+}
+
+footer a {
+    padding: .5em .7em;
+    outline: 1px solid var(--clr-primary-200);
+    border-radius: 50%;
+}
+
+footer a:where(:hover, :focus) {
+    background-color: var(--clr-primary-400);
+    color: var(--neutral-100);
+    outline-color: inherit;
+}

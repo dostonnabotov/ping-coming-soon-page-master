@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <!-- Google Fonts - Libre Franklin (300, 600, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- custom javascript -->
+    <script defer src="./index.js"></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header class="[ container ] [ py-4 ]">
+      <img class="logo" src="./images/logo.svg" alt="Ping brand logo" />
+    </header>
+
+    <main class="container flow">
+      <h1 class="fw-900 text-center text-dark">
+        <span class="fw-400 text-light">We are launching </span>
+        soon!
+      </h1>
+      <p class="fw-400 text-center text-dark">Subscribe and get notified</p>
+      <form class="[ form ] [ grid ]" name="form" id="form">
+        <div>
+          <input type="email" name="email" id="email" placeholder="Your email address..." required />
+          <p class="error-message"></p>
+        </div>
+        <input type="submit" class="[ btn btn--primary ] [ fw-500 ]" value="Notify Me" />
+      </form>
+      <img src="./images/illustration-dashboard.png" alt="graph and raw sketch illustration dashboard" />
+    </main>
+
+    <footer class="[ container flow ] [ py-4 ]">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-center">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
